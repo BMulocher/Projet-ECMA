@@ -94,3 +94,4 @@ void getData(const IloEnv env, char nom_fichier[]) {
       fichier.close();
     }
 }
+
