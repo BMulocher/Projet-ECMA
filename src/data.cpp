@@ -17,7 +17,7 @@ void IloData::getData(const IloEnv env, string nom_fichier) {
     char char1, char2, char3, char4;
     int tmp;
     float tmpFloat;
-    ifstream fichier(nom_fichier);
+    ifstream fichier(nom_fichier.c_str());
 
     if(fichier) {
       fichier >> char1 >> char2 >> tmp >> char3;
@@ -138,7 +138,7 @@ void Data::getData(string nom_fichier) {
     char char1, char2, char3, char4;
     int tmpInt;
     double tmpDouble;
-    ifstream fichier(nom_fichier);
+    ifstream fichier(nom_fichier.c_str());
 
     if(fichier) {
       fichier >> char1 >> char2 >> tmpInt >> char3;

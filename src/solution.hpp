@@ -12,6 +12,8 @@
 class Solution {
 public:
 
+    Data* data;
+    
     // Les données associées
     int m;
     int n;
@@ -79,6 +81,9 @@ public:
 
     // Construit un nom de fichier basé sur le nom du fichier de donnees
     string get_tmp_filename();
+
+    // Retourne la chaine de sortie de la solutin au format standard
+    string to_s(Options* args);
 
     // Pour save et plot la solution
     static void main_print_solution(Solution* solution, Options* args);

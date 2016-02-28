@@ -29,7 +29,9 @@ class U {
     // Enregistre la chaine txt dans le fichier de nom filename
     static void
     write_file(string filename, string txt) {
-        ofstream fid(filename.c_str(), ios::out);
+        string s;
+        s="../solutions/"+filename;
+        ofstream fid(s.c_str(), ios::out);
         if (! fid) {
             string msg = "impossible de créer \"" + filename + "\"";
             cerr << msg << endl;

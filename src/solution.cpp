@@ -23,6 +23,7 @@ Solution::Solution() {
 
 
 Solution::Solution(Data data) {
+    this->data = &data;
     this->size = 0;
     this->m = data.m;
     this->n = data.n;
@@ -50,6 +51,7 @@ Solution::Solution(Data data) {
 
 
 Solution::Solution(const Solution* sol)  {
+    this->data = sol->data;
     this->size = sol->size;
     this->m = sol->m;
     this->n = sol->n;
@@ -74,8 +76,8 @@ Solution::Solution(const Solution* sol)  {
         this->x.push_back(row);
     }
 
-    auto it = begin(sol->voisins);
-    while( it != end(sol->voisins) ) 
+    auto it = sol->voisins.begin();
+    while( it != sol->voisins.end() ) 
     {
         this->voisins.push_back(*it);
         it++;
@@ -84,6 +86,7 @@ Solution::Solution(const Solution* sol)  {
 
 
 void Solution::copy(Solution* sol) {
+    this->data = sol->data;
     this->size = sol->size;
     this->NumP = sol->NumP;
     this->DenumP = sol->DenumP;
@@ -105,8 +108,8 @@ void Solution::copy(Solution* sol) {
         }
 
         this->voisins.clear();
-        auto it = begin(sol->voisins);
-        while( it != end(sol->voisins) ) 
+        auto it = sol->voisins.begin();
+        while( it != sol->voisins.end() ) 
         {
             this->voisins.push_back(*it);
             it++;
@@ -195,61 +198,79 @@ void Solution::console_print() {
     cout << "Nombre de mailles sélectionnées : " << this->size << "\n" << endl;
 }
 
-/*
+
 string Solution::get_tmp_filename() {
     ostringstream buf;
-    buf << inst->name << "-" << this->size
+    buf << data->name << "-" << this->size
         << ".sol";
 
     return buf.str();
 }
-*/
 
-
-Solution::main_print_solution(Solution* sol, Options* args) {
-    if (log1()) {
-        // if (log3()) {
-        //     cout << "Affichage détaillé de la solution\n";
-        //     cout << sol->to_s_long();
-        // }
-        // cout << "Affichage de la solution\n";
-        // cout << sol->to_s();
-        cout << "Affichage détaillé de la solution\n";
-        cout << sol->to_s_long();
-    } else if (log1() ) {
-        /// todo ?
+string Solution::to_s(Options* args) {
+    /// cout << "# solution pour " << inst->name << endl;
+    ostringstream buf;
+    time_t rawtime;
+    time (&rawtime);
+    buf << "Solution générée le : " << ctime(&rawtime) << endl;
+    if (args->solver == 1) {
+        buf << "Instance seule générée" << endl;
     }
-    logn3("Enregistemenet éventuel de la solution\n");
-    if (args->outfilename != "") {
-        if (args->outfilename == "_AUTO_") {
-            // Deux possibilités
-            // - ou bien un fichier d'entrée est spécifié et on l'utilise
-            // - ou bien l'instance est générée sans être enregistrée
-            //   Dans ce cas on basera le fichier de sortie sur le nom de
-            //   l'instance avec le nombre de jobs non déservi et la distance
-            //   (e.g gotic_9_t20_j100_c03_s40-0-2357.sol)
-            //
-            if (args->filename != "") {
-                // On supprimer le répertoire prefix du fichier d'entree pour
-                // que l'enregistreement se fasse dans le repertoire courant.
-                // puis on supprime le suffixe ".dat"
-                ostringstream buf;
-                buf << U::file_basename(args->filename, ".dat")
-                    << "-" << sol->size
-                    << ".sol";
-                // ATTENTION, ICI ON MODIFIE LA CLASSE args
-                args->outfilename = buf.str();
-            } else {
-                // args->outfilename = sol->inst->name + ".sol";
-                args->outfilename = sol->get_tmp_filename();
-            }
+    else if (args->solver == 2)
+    {
+        buf << "Avec le solveur Frontal" << endl;
+    }
+    else if (args->solver == 3)
+    {
+        buf << "Avec le solveur Glouton" << endl;
+    }
+    else if (args->solver == 4)
+    {
+        buf << "Avec la méthode du Recuit Simulé" << endl;
+    }
+    buf << endl;
+    buf << "Nom : "          << U::file_basename(data->name, ".dat")         << endl;
+    buf << endl;
+    buf << "Nombre de mailles sélectionnées : " << this->size << endl;
+    buf << endl;
+    for (int i = 1; i <= this->m; i++)
+    {
+      buf << "|";
+      for (int j = 1; j <= this->n; j++)
+      {
+        if (this->x[i][j] == 1)
+        {
+          buf << ("x|");
+        } else
+        {
+          buf << (" |");
         }
-        U::write_file(args->outfilename, sol->to_s());
+      }
+      buf << "" << endl;
     }
-
+    return buf.str();
 }
 
 
+void Solution::main_print_solution(Solution* sol, Options* args) {
+    logn3("Enregistemenet éventuel de la solution\n");
+    if (args->outfilename != "") {
+        if (args->outfilename == "_AUTO_") {
+            if (args->filename != "") {
+                ostringstream buf;
+                buf << U::file_basename(args->filename, ".dat")
+                    << "-s" << args->solver
+                    << "-" << sol->size
+                    << ".sol";
+                args->outfilename = buf.str();
+            } else {
+                args->outfilename = sol->get_tmp_filename();
+            }
+        }
+        U::write_file(args->outfilename, sol->to_s(args));
+    }
+
+}
 
 
 ////////////////////////////////////////////////////////////////////////////

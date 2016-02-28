@@ -22,8 +22,8 @@ set(EXE ecma)
 #     SET (CMAKE_C_FLAGS_RELWITHDEBINFO "-O2 -g")
 #
 #     SET (CMAKE_CXX_COMPILER             "/usr/bin/clang++")
-     SET (CMAKE_CXX_FLAGS                "-Wall -pthread")
-#     SET (CMAKE_CXX_FLAGS_DEBUG          "-g++")
+     SET (CMAKE_CXX_FLAGS                "-Wall -stdlib=libstdc++ -pthread")
+     SET (CMAKE_CXX_FLAGS_DEBUG          "-g++")
 #     SET (CMAKE_CXX_FLAGS_MINSIZEREL     "-Os -DNDEBUG")
 #     SET (CMAKE_CXX_FLAGS_RELEASE        "-O4 -DNDEBUG")
 #     SET (CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g")
@@ -34,9 +34,9 @@ set(EXE ecma)
 #     SET (CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
 #     SET (CMAKE_RANLIB  "/usr/bin/llvm-ranlib")
 
-#    SET (CPLEX_CXX_CFLAGS   "-I$ENV{CPLEX_INCLUDE_DIR} -I$ENV{CONCERT_INCLUDE_DIR} \
-#                             -m64 -fPIC -fno-strict-aliasing \
-#                             -fexceptions -O -DIL_STD")
+    SET (CPLEX_CXX_CFLAGS   "-I$ENV{CPLEX_INCLUDE_DIR} -I$ENV{CONCERT_INCLUDE_DIR} \
+                             -m64 -fPIC -fno-strict-aliasing \
+                             -fexceptions -O -DIL_STD")
 #    SET (CPLEX_C_CFLAGS     "-I$ENV{CPLEX_INCLUDE_DIR} \
 #                             -m64 -fPIC -fno-strict-aliasing"})
 #    SET (CPLEX_CXX_LDDIRS   "-L$ENV{CPLEX_LIB_DIR} -L$ENV{CONCERT_LIB_DIR}")
@@ -53,7 +53,7 @@ set(EXE ecma)
 #                 -Wno-missing-field-initializers)
 add_definitions(
     -Wall
-    # -Wno-unused-private-field  # Pour inhiber un warning de cplex 12.4
+    -Wno-unused-private-field  # Pour inhiber un warning de cplex 12.4
     -m64
     -fPIC
     -fexceptions

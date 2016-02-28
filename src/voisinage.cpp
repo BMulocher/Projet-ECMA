@@ -51,7 +51,7 @@ bool tryAdd(Data data, Solution* sol, int pos_maille) {
 	        sol->voisins.push_back(voisin);
 	    }
 	    // On supprime la maille sélectionnée de la liste des voisins
-	    sol->voisins.erase(begin(sol->voisins)+pos_maille);
+	    sol->voisins.erase(sol->voisins.begin()+pos_maille);
 	} else
 	{
 		add = false;

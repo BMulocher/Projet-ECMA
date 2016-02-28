@@ -141,6 +141,7 @@ int main(int argc, char *argv[]) {
     // Affichage et enregistrement des données -------------------------------------------
         // todo, dans des fonctions propres de la classe Solution
     sol->console_print();
+    Solution::main_print_solution(sol, args);
     // -----------------------------------------------------------------------------------
 
 

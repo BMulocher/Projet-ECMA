@@ -153,10 +153,10 @@ bool GloutonSolver::solve(Data data, Solution* sol) {
     int i,j;
     int pos_max;
     double updated_cost;
-    auto it = begin(sol->voisins);
-    while( it != end(sol->voisins) )
+    auto it = sol->voisins.begin();
+    while( it != sol->voisins.end() )
     {
-        pos_max = distance(begin(coeffs_voisins),max_element(begin(coeffs_voisins), end(coeffs_voisins)));
+        pos_max = distance(coeffs_voisins.begin(),max_element(coeffs_voisins.begin(), coeffs_voisins.end()));
         i = sol->voisins[pos_max].i;
         j = sol->voisins[pos_max].j;
 
@@ -201,8 +201,8 @@ bool GloutonSolver::solve(Data data, Solution* sol) {
                 coeffs_voisins.push_back(coeffs[voisin.i][voisin.j]);
             }
             // On supprime la maille sélectionnée de la liste des voisins
-            sol->voisins.erase(begin(sol->voisins)+pos_max);
-            coeffs_voisins.erase(begin(coeffs_voisins)+pos_max);
+            sol->voisins.erase(sol->voisins.begin()+pos_max);
+            coeffs_voisins.erase(coeffs_voisins.begin()+pos_max);
             // ? recalcule des couts privés ? selon formalisme
 
             // Maj de la taille de la sol
@@ -212,12 +212,12 @@ bool GloutonSolver::solve(Data data, Solution* sol) {
             // On indique qu'on peut pas le sélectionner
             Select[i][j] = 3;
             // on le supprime de la liste
-            sol->voisins.erase(begin(sol->voisins)+pos_max);
-            coeffs_voisins.erase(begin(coeffs_voisins)+pos_max);
+            sol->voisins.erase(sol->voisins.begin()+pos_max);
+            coeffs_voisins.erase(coeffs_voisins.begin()+pos_max);
         }
 
 
-        it = begin(sol->voisins);
+        it = sol->voisins.begin();
     }
 
     // -------------------------------------------------------------------------------------------------------------------
