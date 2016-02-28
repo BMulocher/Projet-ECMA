@@ -205,7 +205,7 @@ string Solution::get_tmp_filename() {
 }
 */
 
-/*
+
 Solution::main_print_solution(Solution* sol, Options* args) {
     if (log1()) {
         // if (log3()) {
@@ -248,7 +248,7 @@ Solution::main_print_solution(Solution* sol, Options* args) {
     }
 
 }
-*/
+
 
 
 
