@@ -127,6 +127,22 @@ int main(int argc, char *argv[]) {
 
 
 
+    } else if (args->solver == 5)
+    {
+
+        logn1("Solver 5 : Lagrangien");
+        LagrangianSolver* solver = new LagrangianSolver();
+        solver->solve(data, sol);
+        if (solver->found) {
+            //
+        } else {
+            cout << "LagrangianSolver : pas de solution" << endl;
+        }
+        delete solver;
+        logn1("Solver 5 : fin de LagrangianSolver");
+
+
+
 
 
     }else

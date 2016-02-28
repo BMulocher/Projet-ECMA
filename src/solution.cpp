@@ -214,7 +214,7 @@ string Solution::to_s(Options* args) {
     time (&rawtime);
     buf << "Solution générée le : " << ctime(&rawtime) << endl;
     if (args->solver == 1) {
-        buf << "Instance seule générée" << endl;
+        buf << "Résolution par le solveur Cplex" << endl;
     }
     else if (args->solver == 2)
     {
@@ -227,6 +227,10 @@ string Solution::to_s(Options* args) {
     else if (args->solver == 4)
     {
         buf << "Avec la méthode du Recuit Simulé" << endl;
+    }
+    else if (args->solver == 5)
+    {
+        buf << "Avec le solveur Lagrangien" << endl;
     }
     buf << endl;
     buf << "Nom : "          << U::file_basename(data->name, ".dat")         << endl;
