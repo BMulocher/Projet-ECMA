@@ -55,15 +55,15 @@ include CMakeFiles/txz.dir/progress.make
 
 CMakeFiles/txz:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Création d'une archive datée du projet (TEST XZ)"
-	@echo " => duplication du projet en : Projet-ECMA-20160305-17h05"
-	cp -Rp /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05
-	rm -r /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05/build/
-	mkdir -p /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05/build/
-	tar cf /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05.tar -C /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/.. Projet-ECMA-20160305-17h05
-	xz /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05.tar
-	mv /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05.tar.xz /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05.txz
-	rm -r /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05
-	@echo " => Archive faite : Projet-ECMA-20160305-17h05.tbz"
+	@echo " => duplication du projet en : Projet-ECMA-20160306-15h02"
+	cp -Rp /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160306-15h02
+	rm -r /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160306-15h02/build/
+	mkdir -p /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160306-15h02/build/
+	tar cf /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160306-15h02.tar -C /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/.. Projet-ECMA-20160306-15h02
+	xz /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160306-15h02.tar
+	mv /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160306-15h02.tar.xz /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160306-15h02.txz
+	rm -r /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160306-15h02
+	@echo " => Archive faite : Projet-ECMA-20160306-15h02.tbz"
 
 txz: CMakeFiles/txz
 txz: CMakeFiles/txz.dir/build.make

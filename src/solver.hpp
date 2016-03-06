@@ -101,6 +101,15 @@ public:
     //Solution* get_solution() {return this->solution;};
 };
 
+class relaxedSolver : public Solver {
+public:
+    relaxedSolver();
+    virtual ~relaxedSolver();
+    virtual bool solve(Data data, Solution* sol);
+    void setrelaxed (Data data, Solution* sol, IloModel model, NumVarMatrix x, NumVarMatrix a, NumVarMatrix p, NumVarTriMat d , IloRangeArray constraints);
+    //Solution* get_solution() {return this->solution;};
+};
+
 
 #endif
 

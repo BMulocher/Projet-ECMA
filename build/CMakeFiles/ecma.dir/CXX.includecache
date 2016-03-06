@@ -560,6 +560,10 @@ solver.hpp
 voisinage.hpp
 /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/voisinage.hpp
 
+/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/relaxedSolver.cpp
+solver.hpp
+/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/solver.hpp
+
 /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/solution.cpp
 solution.hpp
 /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/solution.hpp

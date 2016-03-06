@@ -439,6 +439,33 @@ src/recuitSolver.cpp.s:
 	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/recuitSolver.cpp.s
 .PHONY : src/recuitSolver.cpp.s
 
+src/relaxedSolver.o: src/relaxedSolver.cpp.o
+
+.PHONY : src/relaxedSolver.o
+
+# target to build an object file
+src/relaxedSolver.cpp.o:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/relaxedSolver.cpp.o
+.PHONY : src/relaxedSolver.cpp.o
+
+src/relaxedSolver.i: src/relaxedSolver.cpp.i
+
+.PHONY : src/relaxedSolver.i
+
+# target to preprocess a source file
+src/relaxedSolver.cpp.i:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/relaxedSolver.cpp.i
+.PHONY : src/relaxedSolver.cpp.i
+
+src/relaxedSolver.s: src/relaxedSolver.cpp.s
+
+.PHONY : src/relaxedSolver.s
+
+# target to generate assembly for a file
+src/relaxedSolver.cpp.s:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/relaxedSolver.cpp.s
+.PHONY : src/relaxedSolver.cpp.s
+
 src/solution.o: src/solution.cpp.o
 
 .PHONY : src/solution.o
@@ -561,6 +588,9 @@ help:
 	@echo "... src/recuitSolver.o"
 	@echo "... src/recuitSolver.i"
 	@echo "... src/recuitSolver.s"
+	@echo "... src/relaxedSolver.o"
+	@echo "... src/relaxedSolver.i"
+	@echo "... src/relaxedSolver.s"
 	@echo "... src/solution.o"
 	@echo "... src/solution.i"
 	@echo "... src/solution.s"

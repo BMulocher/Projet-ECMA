@@ -14,6 +14,7 @@ typedef IloArray<IloIntArray>       IntMatrix;
 typedef IloArray<IloNumArray>       NumMatrix;
 typedef IloArray<IloBoolArray>      BoolMatrix;
 typedef IloArray<IloNumVarArray>    NumVarMatrix;
+typedef IloArray<NumVarMatrix>      NumVarTriMat;
 typedef IloArray<IloIntVarArray>    IntVarMatrix;
 typedef IloArray<IloBoolVarArray>   BoolVarMatrix;
 typedef IloArray<BoolVarMatrix>     BoolVarTriMat;

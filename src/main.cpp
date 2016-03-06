@@ -143,6 +143,22 @@ int main(int argc, char *argv[]) {
 
 
 
+    } else if (args->solver == 6)
+    {
+
+        logn1("Solver 6 : Relaché continu");
+        relaxedSolver* solver = new relaxedSolver();
+        solver->solve(data, sol);
+        if (solver->found) {
+            //
+        } else {
+            cout << "relaxedSolver : pas de solution" << endl;
+        }
+        delete solver;
+        logn1("Solver 6 : fin de relaxedSolver");
+
+
+
 
 
     }else
