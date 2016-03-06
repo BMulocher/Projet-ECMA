@@ -55,13 +55,13 @@ include CMakeFiles/tbz.dir/progress.make
 
 CMakeFiles/tbz:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Création d'une archive datée du projet"
-	@echo " => duplication du projet en : Projet-ECMA-20160228-15h59"
-	cp -Rp /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160228-15h59
-	rm -r /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160228-15h59/build/
-	mkdir -p /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160228-15h59/build/
-	tar cjf /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160228-15h59.tbz -C /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/.. Projet-ECMA-20160228-15h59
-	rm -r /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160228-15h59
-	@echo " => Archive faite : Projet-ECMA-20160228-15h59.tbz"
+	@echo " => duplication du projet en : Projet-ECMA-20160305-17h05"
+	cp -Rp /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05
+	rm -r /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05/build/
+	mkdir -p /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05/build/
+	tar cjf /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05.tbz -C /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/.. Projet-ECMA-20160305-17h05
+	rm -r /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA-20160305-17h05
+	@echo " => Archive faite : Projet-ECMA-20160305-17h05.tbz"
 
 tbz: CMakeFiles/tbz
 tbz: CMakeFiles/tbz.dir/build.make

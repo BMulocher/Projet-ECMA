@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
             cout << "NoConnexSolver : pas de solution" << endl;
         }
         delete solver;
-        logn1("Solver 3 : fin de NoConnexSolver");
+        logn1("Solver 2 : fin de NoConnexSolver");
 
         
 

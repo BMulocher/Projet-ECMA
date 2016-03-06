@@ -223,6 +223,33 @@ txz/fast:
 	$(MAKE) -f CMakeFiles/txz.dir/build.make CMakeFiles/txz.dir/build
 .PHONY : txz/fast
 
+src/LagrangianSolver.o: src/LagrangianSolver.cpp.o
+
+.PHONY : src/LagrangianSolver.o
+
+# target to build an object file
+src/LagrangianSolver.cpp.o:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.o
+.PHONY : src/LagrangianSolver.cpp.o
+
+src/LagrangianSolver.i: src/LagrangianSolver.cpp.i
+
+.PHONY : src/LagrangianSolver.i
+
+# target to preprocess a source file
+src/LagrangianSolver.cpp.i:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.i
+.PHONY : src/LagrangianSolver.cpp.i
+
+src/LagrangianSolver.s: src/LagrangianSolver.cpp.s
+
+.PHONY : src/LagrangianSolver.s
+
+# target to generate assembly for a file
+src/LagrangianSolver.cpp.s:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.s
+.PHONY : src/LagrangianSolver.cpp.s
+
 src/data.o: src/data.cpp.o
 
 .PHONY : src/data.o
@@ -510,6 +537,9 @@ help:
 	@echo "... package"
 	@echo "... tbz"
 	@echo "... ecma"
+	@echo "... src/LagrangianSolver.o"
+	@echo "... src/LagrangianSolver.i"
+	@echo "... src/LagrangianSolver.s"
 	@echo "... src/data.o"
 	@echo "... src/data.i"
 	@echo "... src/data.s"

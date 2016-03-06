@@ -92,6 +92,15 @@ public:
 
 };
 
+class LagrangianSolver : public Solver {
+public:
+    LagrangianSolver();
+    virtual ~LagrangianSolver();
+    virtual bool solve(Data data, Solution* sol);
+    void setLagrangian (Data data, Solution* sol, IloModel model, BoolVarMatrix x, NumVarMatrix a, NumVarMatrix p, BoolVarTriMat d, IloNum lambda, IloRangeArray constraints);
+    //Solution* get_solution() {return this->solution;};
+};
+
 
 #endif
 

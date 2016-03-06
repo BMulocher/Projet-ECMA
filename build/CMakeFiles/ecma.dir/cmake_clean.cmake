@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ecma.dir/src/data.cpp.o"
   "CMakeFiles/ecma.dir/src/frontalSolver.cpp.o"
   "CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o"
+  "CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.o"
   "CMakeFiles/ecma.dir/src/logger.cpp.o"
   "CMakeFiles/ecma.dir/src/main.cpp.o"
   "CMakeFiles/ecma.dir/src/noconnexSolver.cpp.o"

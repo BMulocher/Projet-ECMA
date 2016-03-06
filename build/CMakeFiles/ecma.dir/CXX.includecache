@@ -428,6 +428,10 @@ ilcplex/ilocplexi.h
 
 /Applications/CPLEX_Studio1261/cplex/include/ilcplex/iloparam.h
 
+/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/LagrangianSolver.cpp
+solver.hpp
+/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/solver.hpp
+
 /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/common.hpp
 stdio.h
 -
