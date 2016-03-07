@@ -160,6 +160,23 @@ int main(int argc, char *argv[]) {
 
 
 
+    } else if (args->solver == 7)
+    {
+
+        logn1("Solver 7 : Génération de Colonnes");
+        colgenSolver* solver = new colgenSolver();
+        solver->solve(data, sol);
+        if (solver->found) {
+            //
+        } else {
+            cout << "colgenSolver : pas de solution" << endl;
+        }
+        delete solver;
+        logn1("Solver 7 : fin de colgenSolver");
+
+
+
+
 
     }else
     {
@@ -173,7 +190,6 @@ int main(int argc, char *argv[]) {
     // Affichage et enregistrement des données -------------------------------------------
         // todo, dans des fonctions propres de la classe Solution
     sol->console_print();
-    Solution::main_print_solution(sol, args);
     // -----------------------------------------------------------------------------------
 
 
@@ -188,7 +204,8 @@ int main(int argc, char *argv[]) {
     //cout << "Temps de calcul:\t" << diff << "s" << endl << endl;
     // -----------------------------------------------------------------------------------
 
-
+    // Print dans un fichier externe
+    Solution::main_print_solution(sol, args, diff);
 
 
     // Nettoyage des objets alloués dans ce main() ---------------------------------------

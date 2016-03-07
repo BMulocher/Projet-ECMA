@@ -432,6 +432,10 @@ ilcplex/ilocplexi.h
 solver.hpp
 /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/solver.hpp
 
+/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/colgenSolver.cpp
+solver.hpp
+/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/solver.hpp
+
 /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/common.hpp
 stdio.h
 -

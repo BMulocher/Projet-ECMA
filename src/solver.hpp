@@ -110,6 +110,15 @@ public:
     //Solution* get_solution() {return this->solution;};
 };
 
+class colgenSolver : public Solver {
+public:
+    colgenSolver();
+    virtual ~colgenSolver();
+    virtual bool solve(Data data, Solution* sol);
+    void setcolgen (Data data, Solution* sol, IloModel model, BoolVarMatrix x, NumVarMatrix a, NumVarMatrix p, BoolVarTriMat d, vector<vector<int>> deleted_variables, IloRangeArray constraints);
+    //Solution* get_solution() {return this->solution;};
+};
+
 
 #endif
 

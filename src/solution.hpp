@@ -83,10 +83,10 @@ public:
     string get_tmp_filename();
 
     // Retourne la chaine de sortie de la solutin au format standard
-    string to_s(Options* args);
+    string to_s(Options* args, double diff);
 
     // Pour save et plot la solution
-    static void main_print_solution(Solution* solution, Options* args);
+    static void main_print_solution(Solution* solution, Options* args, double diff);
 
 };
 

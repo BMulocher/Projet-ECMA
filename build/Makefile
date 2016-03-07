@@ -250,6 +250,33 @@ src/LagrangianSolver.cpp.s:
 	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.s
 .PHONY : src/LagrangianSolver.cpp.s
 
+src/colgenSolver.o: src/colgenSolver.cpp.o
+
+.PHONY : src/colgenSolver.o
+
+# target to build an object file
+src/colgenSolver.cpp.o:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/colgenSolver.cpp.o
+.PHONY : src/colgenSolver.cpp.o
+
+src/colgenSolver.i: src/colgenSolver.cpp.i
+
+.PHONY : src/colgenSolver.i
+
+# target to preprocess a source file
+src/colgenSolver.cpp.i:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/colgenSolver.cpp.i
+.PHONY : src/colgenSolver.cpp.i
+
+src/colgenSolver.s: src/colgenSolver.cpp.s
+
+.PHONY : src/colgenSolver.s
+
+# target to generate assembly for a file
+src/colgenSolver.cpp.s:
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/colgenSolver.cpp.s
+.PHONY : src/colgenSolver.cpp.s
+
 src/data.o: src/data.cpp.o
 
 .PHONY : src/data.o
@@ -567,6 +594,9 @@ help:
 	@echo "... src/LagrangianSolver.o"
 	@echo "... src/LagrangianSolver.i"
 	@echo "... src/LagrangianSolver.s"
+	@echo "... src/colgenSolver.o"
+	@echo "... src/colgenSolver.i"
+	@echo "... src/colgenSolver.s"
 	@echo "... src/data.o"
 	@echo "... src/data.i"
 	@echo "... src/data.s"

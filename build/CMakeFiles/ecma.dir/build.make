@@ -57,9 +57,33 @@ include CMakeFiles/ecma.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ecma.dir/flags.make
 
+CMakeFiles/ecma.dir/src/colgenSolver.cpp.o: CMakeFiles/ecma.dir/flags.make
+CMakeFiles/ecma.dir/src/colgenSolver.cpp.o: ../src/colgenSolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ecma.dir/src/colgenSolver.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/colgenSolver.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/colgenSolver.cpp
+
+CMakeFiles/ecma.dir/src/colgenSolver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecma.dir/src/colgenSolver.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/colgenSolver.cpp > CMakeFiles/ecma.dir/src/colgenSolver.cpp.i
+
+CMakeFiles/ecma.dir/src/colgenSolver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecma.dir/src/colgenSolver.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/colgenSolver.cpp -o CMakeFiles/ecma.dir/src/colgenSolver.cpp.s
+
+CMakeFiles/ecma.dir/src/colgenSolver.cpp.o.requires:
+
+.PHONY : CMakeFiles/ecma.dir/src/colgenSolver.cpp.o.requires
+
+CMakeFiles/ecma.dir/src/colgenSolver.cpp.o.provides: CMakeFiles/ecma.dir/src/colgenSolver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ecma.dir/build.make CMakeFiles/ecma.dir/src/colgenSolver.cpp.o.provides.build
+.PHONY : CMakeFiles/ecma.dir/src/colgenSolver.cpp.o.provides
+
+CMakeFiles/ecma.dir/src/colgenSolver.cpp.o.provides.build: CMakeFiles/ecma.dir/src/colgenSolver.cpp.o
+
+
 CMakeFiles/ecma.dir/src/data.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/data.cpp.o: ../src/data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ecma.dir/src/data.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ecma.dir/src/data.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/data.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/data.cpp
 
 CMakeFiles/ecma.dir/src/data.cpp.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/ecma.dir/src/data.cpp.o.provides.build: CMakeFiles/ecma.dir/src/data.
 
 CMakeFiles/ecma.dir/src/frontalSolver.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/frontalSolver.cpp.o: ../src/frontalSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ecma.dir/src/frontalSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ecma.dir/src/frontalSolver.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/frontalSolver.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/frontalSolver.cpp
 
 CMakeFiles/ecma.dir/src/frontalSolver.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/ecma.dir/src/frontalSolver.cpp.o.provides.build: CMakeFiles/ecma.dir/
 
 CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o: ../src/gloutonSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/gloutonSolver.cpp
 
 CMakeFiles/ecma.dir/src/gloutonSolver.cpp.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o.provides.build: CMakeFiles/ecma.dir/
 
 CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.o: ../src/LagrangianSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/LagrangianSolver.cpp
 
 CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/ecma.dir/src/LagrangianSolver.cpp.o.provides.build: CMakeFiles/ecma.d
 
 CMakeFiles/ecma.dir/src/logger.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/logger.cpp.o: ../src/logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ecma.dir/src/logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ecma.dir/src/logger.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/logger.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/logger.cpp
 
 CMakeFiles/ecma.dir/src/logger.cpp.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/ecma.dir/src/logger.cpp.o.provides.build: CMakeFiles/ecma.dir/src/log
 
 CMakeFiles/ecma.dir/src/main.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ecma.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ecma.dir/src/main.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/main.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/main.cpp
 
 CMakeFiles/ecma.dir/src/main.cpp.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/ecma.dir/src/main.cpp.o.provides.build: CMakeFiles/ecma.dir/src/main.
 
 CMakeFiles/ecma.dir/src/noconnexSolver.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/noconnexSolver.cpp.o: ../src/noconnexSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ecma.dir/src/noconnexSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ecma.dir/src/noconnexSolver.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/noconnexSolver.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/noconnexSolver.cpp
 
 CMakeFiles/ecma.dir/src/noconnexSolver.cpp.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/ecma.dir/src/noconnexSolver.cpp.o.provides.build: CMakeFiles/ecma.dir
 
 CMakeFiles/ecma.dir/src/recuitSolver.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/recuitSolver.cpp.o: ../src/recuitSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ecma.dir/src/recuitSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ecma.dir/src/recuitSolver.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/recuitSolver.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/recuitSolver.cpp
 
 CMakeFiles/ecma.dir/src/recuitSolver.cpp.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/ecma.dir/src/recuitSolver.cpp.o.provides.build: CMakeFiles/ecma.dir/s
 
 CMakeFiles/ecma.dir/src/relaxedSolver.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/relaxedSolver.cpp.o: ../src/relaxedSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ecma.dir/src/relaxedSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ecma.dir/src/relaxedSolver.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/relaxedSolver.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/relaxedSolver.cpp
 
 CMakeFiles/ecma.dir/src/relaxedSolver.cpp.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/ecma.dir/src/relaxedSolver.cpp.o.provides.build: CMakeFiles/ecma.dir/
 
 CMakeFiles/ecma.dir/src/solution.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/solution.cpp.o: ../src/solution.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ecma.dir/src/solution.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ecma.dir/src/solution.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/solution.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/solution.cpp
 
 CMakeFiles/ecma.dir/src/solution.cpp.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/ecma.dir/src/solution.cpp.o.provides.build: CMakeFiles/ecma.dir/src/s
 
 CMakeFiles/ecma.dir/src/solver.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/solver.cpp.o: ../src/solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ecma.dir/src/solver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ecma.dir/src/solver.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/solver.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/solver.cpp
 
 CMakeFiles/ecma.dir/src/solver.cpp.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/ecma.dir/src/solver.cpp.o.provides.build: CMakeFiles/ecma.dir/src/sol
 
 CMakeFiles/ecma.dir/src/voisinage.cpp.o: CMakeFiles/ecma.dir/flags.make
 CMakeFiles/ecma.dir/src/voisinage.cpp.o: ../src/voisinage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ecma.dir/src/voisinage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ecma.dir/src/voisinage.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecma.dir/src/voisinage.cpp.o -c /Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/src/voisinage.cpp
 
 CMakeFiles/ecma.dir/src/voisinage.cpp.i: cmake_force
@@ -347,6 +371,7 @@ CMakeFiles/ecma.dir/src/voisinage.cpp.o.provides.build: CMakeFiles/ecma.dir/src/
 
 # Object files for target ecma
 ecma_OBJECTS = \
+"CMakeFiles/ecma.dir/src/colgenSolver.cpp.o" \
 "CMakeFiles/ecma.dir/src/data.cpp.o" \
 "CMakeFiles/ecma.dir/src/frontalSolver.cpp.o" \
 "CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o" \
@@ -363,6 +388,7 @@ ecma_OBJECTS = \
 # External object files for target ecma
 ecma_EXTERNAL_OBJECTS =
 
+ecma: CMakeFiles/ecma.dir/src/colgenSolver.cpp.o
 ecma: CMakeFiles/ecma.dir/src/data.cpp.o
 ecma: CMakeFiles/ecma.dir/src/frontalSolver.cpp.o
 ecma: CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o
@@ -380,7 +406,7 @@ ecma: /Applications/CPLEX_Studio1261/cplex/lib/x86-64_osx/static_pic/libilocplex
 ecma: /Applications/CPLEX_Studio1261/cplex/lib/x86-64_osx/static_pic/libcplex.a
 ecma: /Applications/CPLEX_Studio1261/concert/lib/x86-64_osx/static_pic/libconcert.a
 ecma: CMakeFiles/ecma.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ecma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bmulocher/Documents/MPRO/ECMA/Projet/Projet-ECMA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ecma"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ecma.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -388,6 +414,7 @@ CMakeFiles/ecma.dir/build: ecma
 
 .PHONY : CMakeFiles/ecma.dir/build
 
+CMakeFiles/ecma.dir/requires: CMakeFiles/ecma.dir/src/colgenSolver.cpp.o.requires
 CMakeFiles/ecma.dir/requires: CMakeFiles/ecma.dir/src/data.cpp.o.requires
 CMakeFiles/ecma.dir/requires: CMakeFiles/ecma.dir/src/frontalSolver.cpp.o.requires
 CMakeFiles/ecma.dir/requires: CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o.requires

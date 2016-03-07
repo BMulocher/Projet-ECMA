@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ecma.dir/src/colgenSolver.cpp.o"
   "CMakeFiles/ecma.dir/src/data.cpp.o"
   "CMakeFiles/ecma.dir/src/frontalSolver.cpp.o"
   "CMakeFiles/ecma.dir/src/gloutonSolver.cpp.o"

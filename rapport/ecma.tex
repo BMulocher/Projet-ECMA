@@ -67,6 +67,7 @@ Le problème s'énonce comme suit :\\
 
 
 ~\\
+\newpage
 \section{Modélisation du problème en ignorant la connexité}
 
 
@@ -173,6 +174,7 @@ On aurait également pu inverser le rôle des $p_{ij}$ et des $a_{ij}$ dans la r
 
 
 ~\\
+\newpage
 \section{Modélisation de la connexité}
 
 Pour modéliser la connexité, on a utilisé la méthode suggérée par l'énoncé. On définit des variables $d^h_{ij}$ pour représenter la distance $h \in \mathbb{N}$ d'une maille sélectionnée $(i,j)$ à une origine fixée. Ainsi, si on suppose qu'une origine a été déterminée, on aura :
@@ -208,7 +210,7 @@ d^{h+1}_{ij} \le d^h_{i+1~j} + d^h_{i-1~j} + d^h_{i~j+1} + d^h_{i~j-1} \qquad \f
 
 De cette façon, si $d^h_{ij} = 1$ pour une certaine maille $(i,j) \in M$, $h$ ne représente pas forcément la longueur du plus court chemin de l'origine à $(i,j)$, mais la taille d'un chemin existant. Seule nous important l'existence d'un tel chemin pour la connexité, cela n'est pas problématique.
 
-
+\newpage
 \section{Modélisation complète du problème en variables mixtes}
 
 
@@ -243,7 +245,123 @@ Le problème complet, sans contrainte fractionnaire et tenant compte de la conne
 \end{aligned} \right.
 \end{equation}
 
+\newpage
 
+\section{Résolution du problème}
+
+\subsection{Résolution par Cplex}
+
+Pour la résolution via Cplex, nous avons utilisé l'API Cplex C++. Nous avons programmé deux solvers différents, un qui résout le problème complet et un qui résout le problème sans les contraintes de connexité.
+
+La combinatoire du problème est telle que dès que les instances commencent à être de taille trop importante, les temps de calcul deviennent déraisonnables, même pour le solveur qui ne tient pas compte des contraintes de connexité.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Instances & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10  \\
+\hline
+5-8 (score)  & 15 & 4 & N/A & 18 & 25 & 13 & 18 & 14 & 9 & 16 \\
+\hline
+5-8 (temps en s)  & 1.0 & 0.0 & N/A & 1.0 & 0.0 & 2.0 & 0.0 & 1.0 & 1.0 & 0.0 \\
+\hline
+12-10 (temps en s)  & 1h + & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Résultats du solveur Cplex}
+\end{table}
+
+A partir des instances de taille 12-10, le solveur Cplex met plus d'une heure à trouver une solution, nous n'avons donc pas poursuivi nos tentatives de résolutions par ce solveur.
+
+Le deuxième solveur que nous avons utilisé ne tient pas compte des contraintes de connexité, le modèle repose donc sur une combinatoire beaucoup moins lourde que le premier et nous devrions pouvoir trouver des solutions pour des problèmes de taille plus importante.\\
+Cependant, ne tenant pas compte de toutes les contraintes du problème, les solutions données par cet algorithme consitituent donc des bornes supérieures aux solutions optimales.
+
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Instances & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10  \\
+\hline
+5-8 (score)  & 15 & 4 & N/A & 18 & 25 & 13 & 18 & 14 & 9 & 16 \\
+\hline
+5-8 (temps en s)  & 0.0 & 0.0 & N/A & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+12-10 (score)       & 42  & 4   & 65  & 62  & 107 & 51  & 56  & 78  & 44  & 115\\
+\hline
+12-10 (temps en s)  & 6.0 & 6.0 & 2.0 & 1.0 & à.0 & 2.0 & 6.0 & 3.0 & 6.0 & 0.0 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Résultats du solveur Cplex sans connexité}
+\end{table}
+
+A partir des instances de taille 15-17, le solveur Cplex utilisant la modélisation sans les contraintes de connexité met plus d'une heure à trouver une solution, nous n'avons donc pas poursuivi nos tentatives de résolutions par ce solveur.
+
+\subsection{Résolution par des heuristiques}
+
+\subsubsection{Méthode Gloutonne Connexe}
+
+Objectif de la méthode gloutonne : obtenir très rapidement une borne inferieure de qualité relativement bonne.
+
+Descrption de la méthode : 
+
+\begin{enumerate}
+\item On commence par trier les différentes mailles de l'instance en fonction de la somme de leurs coefficients de handicap.
+\item Ensuite on sélectionne une maille de départ parmi celles ayant le plus grand coefficient de handicap pour débuter notre heuristique gloutonne. Dans le même temps on met à jour la somme des coefficient choisi qui doit être 
+\item On récupère les voisins de notre maille de départ à la condition que ces voisins soient toujours des mailles de l'instance
+\item On sélectionne le voisin de notre maille de départ qui a le coefficient le plus élevé à condition que son ajout dans la liste des mailles sélectionnées ne fasse pas tomber la somme $H^{p}+H^{a}$ en dessous de 2. Puis on supprime cette maille de l'ensemble des voisins et on y ajoute ses voisins.
+\item Si l'ajout de cette maille fait tomber la somme $H^{p}+H^{a}$ en dessous de 2, on marque cette maille comme non-sélectionnable et on n'ajoute pas ses voisins à l'ensemble des voisins. 
+\item On répète les étapes 4 et 5 en cherchant le voisin de coefficient le plus élevé parmi tous les voisins présents dans notre ensemble de voisins jusqu'à avoir épuisé cette liste.
+\item On répète ensuite les opérations 2 à 6 en changeant la maille de départ (parmi la liste des mailles ayant le plus grand coefficient de handicap). On conseve la meilleure solution.
+\item La solution finale est connexe, on a donc une borne inférieure de la solution optimale.
+\end{enumerate}
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Instances & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10  \\
+\hline
+5-8 (score)         & 15  & 4   & N/A & 18  & 25  & 13  & 18  & 14  & 9   & 16 \\
+\hline
+5-8 (temps en s)    & 0.0 & 0.0 & N/A & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+12-10 (score)       & 41  & 4   & 55  & 37  & 107 & 50  & 22  & 78  & 32  & 115\\
+\hline
+12-10 (temps en s)  & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+15-17 (score)       & 31  & 8   & 102 & 74  & 215 & 68  & 51  & 139 & 89  & 242\\
+\hline
+15-17 (temps en s)  & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+20-25 (score)       & 52  & 20  & 158 & 131 & 389 & 69  & 68  & 253 & 189 & 427\\
+\hline
+20-25 (temps en s)  & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+25-30 (score)       & 88  & 51  & 229 & 56  & 513 & 79  & 83  & 320 & 254 & 557\\
+\hline
+25-30 (temps en s)  & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Résultats du solveur Glouton Connexe}
+\end{table}
+
+Ce solveur nous permet donc de trouver des bornes inférieures de bonne qualité pour chaque instance quasiment instantanément.
+
+\subsubsection{Méthode Gloutonne Non Connexe}
+
+Objectif de la méthode gloutonne non connexe : obtenir très rapidement une borne supérieure de qualité relativement bonne.
+
+\subsubsection{Connexification des résultats de la Méthode Gloutonne Non Connexe}
+
+\subsubsection{Recuit Simulé}
+
+\subsection{Résolution Exacte}
+
+\subsubsection{Utilisation des bornes trouvées grâce aux heuristiques}
 
 
 

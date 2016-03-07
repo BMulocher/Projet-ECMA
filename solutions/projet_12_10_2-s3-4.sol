@@ -1,4 +1,4 @@
-Solution générée le : Sat Mar  5 20:01:14 2016
+Solution générée le : Mon Mar  7 16:30:21 2016
 
 Avec le solveur Glouton
 
@@ -18,4 +18,5 @@ Nombre de mailles sélectionnées : 4
 | | | | | | | | | | |
 | | | | | | | | | | |
 | | | | | | | | | | |
+Temps de résolution : 0s
 

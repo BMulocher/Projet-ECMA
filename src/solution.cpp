@@ -207,7 +207,7 @@ string Solution::get_tmp_filename() {
     return buf.str();
 }
 
-string Solution::to_s(Options* args) {
+string Solution::to_s(Options* args, double diff) {
     /// cout << "# solution pour " << inst->name << endl;
     ostringstream buf;
     time_t rawtime;
@@ -252,11 +252,12 @@ string Solution::to_s(Options* args) {
       }
       buf << "" << endl;
     }
+    buf << "Temps de résolution : " << diff << "s" << endl;
     return buf.str();
 }
 
 
-void Solution::main_print_solution(Solution* sol, Options* args) {
+void Solution::main_print_solution(Solution* sol, Options* args, double diff) {
     logn3("Enregistemenet éventuel de la solution\n");
     if (args->outfilename != "") {
         if (args->outfilename == "_AUTO_") {
@@ -271,7 +272,7 @@ void Solution::main_print_solution(Solution* sol, Options* args) {
                 args->outfilename = sol->get_tmp_filename();
             }
         }
-        U::write_file(args->outfilename, sol->to_s(args));
+        U::write_file(args->outfilename, sol->to_s(args, diff));
     }
 
 }
